@@ -1,0 +1,15 @@
+.p1 > p {
+  color: red;
+}
+
+.all-article p + p {
+  color: yellow;
+}
+
+span[class="c1"] {
+  color: yellow;
+}
+
+a[href$="pdf"] {
+  color: red;
+}
