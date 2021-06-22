@@ -13,3 +13,28 @@ span[class="c1"] {
 a[href$="pdf"] {
   color: red;
 }
+
+.title {
+  font-size: 1.2rem;
+}
+
+.title h1:hover {
+  background: red;
+}
+
+.link1 a:active {
+  color: rgb(245, 14, 206);
+}
+.link1 a:visited {
+  color: crimson;
+}
+.link2 a:active {
+  color: white;
+}
+.link2 a:visited {
+  color: rgb(85, 83, 83);
+}
+
+article p:first-child {
+  color: red;
+}

@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  text-align: center;
+  padding: 20px 0;
+  background: black;
+  color: wheat;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+
+  justify-content: space-around;
+}
+
+.items {
+  min-width: 5rem;
+  min-height: 5rem;
+  margin: 2px;
+}
+.one {
+  background: yellow;
+}
+.two {
+  background: red;
+}
+.three {
+  background: blue;
+}

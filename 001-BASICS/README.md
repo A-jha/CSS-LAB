@@ -308,5 +308,3 @@ a[href$="pdf"] {
   color: red;
 }
 ```
-
-## Pseudo Selectors
