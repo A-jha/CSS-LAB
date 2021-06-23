@@ -118,3 +118,66 @@ The direct child elements of a flex container automatically becomes flexible (fl
   - A shorthand property for the flex-grow, flex-shrink, and the flex-basis properties
 - ### align-self
   - Specifies the alignment for a flex item (overrides the flex container's align-items property)
+
+## The order Property
+
+The order property specifies the order of the flex items.
+
+- The first flex item in the code does not have to appear as the first item in the layout.
+
+- The order value must be a number, default value is 0.
+
+- order is a comparision between each child and according to that positioned.
+
+![order](../Assets/order.svg)
+
+## Flex Grow
+
+The flex-grow property specifies how much a flex item will grow **relative** to the rest of the flex items.
+
+- The value must be a number, default value is 0.
+
+```
+ if total width is 100 and we have 3 item
+ item-1 flex-2
+ item-2 flex-4
+ item-3 dlex-2
+
+ then width of item-1 (2 * 100)/8 = 25%
+ then width of item-2 (4 * 100)/8 = 50%
+ then width of item-3 (2 * 100)/8 = 25%
+```
+
+## flex-shrink
+
+The flex-shrink property specifies how much a flex item will shrink **relative** to the rest of the flex items.
+
+The value must be a number, default value is 1.
+
+- if flex-shrink = 0 then the item will not shrink.
+
+## flex-basis
+
+The flex-basis property specifies the initial length of a flex item.
+
+- if length is not change later then it will be of the flex-basis size always.
+
+## flex
+
+The flex property is a shorthand property for the `flex-grow`, `flex-shrink`, and `flex-basis` properties.
+
+## align-self
+
+The align-self property specifies the alignment for the selected item inside the flexible container.
+
+The align-self property overrides the default alignment set by the container's align-items property.
+
+---
+
+Completed-Flex I will do projects than links will be added.
+
+---
+
+ <center>copyright © Avinash Jha 2021</center>
+ 
+-----
