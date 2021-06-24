@@ -2,7 +2,16 @@
   padding: 0;
   margin: 0;
 }
-.nav-container {
+body {
+  font-family: "Courier New", Courier, monospace;
+  background: linear-gradient(45deg, black, red);
+}
+.brand {
+  color: wheat;
+  text-align: center;
+  margin: 2rem;
+}
+.nav-container-1 {
   background: linear-gradient(
     30deg,
     rgb(65, 63, 63),
@@ -18,6 +27,20 @@
   justify-content: center;
   flex-wrap: wrap;
 }
+.bar {
+  color: white;
+  font-size: 2rem;
+  display: none;
+  background: transparent;
+  border: none;
+  transform: rotate(0deg);
+  transition: transform 1s ease-out;
+}
+.bar:hover {
+  color: rgb(242, 244, 247);
+  transform: rotate(90deg);
+  transition: transform 1s ease-out;
+}
 .logo {
   background: transparent;
   padding: 10px 20px;
@@ -25,6 +48,7 @@
   font-size: 2rem;
   align-self: center;
   text-align: center;
+  font-weight: 700;
 }
 .nav-links {
   flex-grow: 3;
@@ -53,8 +77,51 @@
   color: aqua;
   font-size: 1.3rem;
 }
+.card-container {
+  overflow-x: auto;
+  display: flex;
+  justify-content: space-between;
+}
+.card {
+  min-width: 300px;
+  padding: 1rem;
+  margin: 1rem;
+  background: #fff;
+  box-shadow: 1px 2px 2px 1px black;
+  border-radius: 3px;
+}
+.card-title {
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 2rem;
+  text-align: center;
+  padding-bottom: 5px;
+}
+.card-body {
+  font-size: 1.2rem;
+}
+
 @media screen and (max-width: 750px) {
   .navbar {
     display: block;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .navbar {
+    align-items: center;
+    display: flex;
+  }
+  .bar {
+    display: block;
+  }
+  .logo {
+    font-size: 1.5rem;
+  }
+  .nav-links {
+    display: none;
+    text-align: center;
+  }
+  .social-icon {
+    display: none;
   }
 }
