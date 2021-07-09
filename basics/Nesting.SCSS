@@ -1,0 +1,32 @@
+/*We have a 
+-> div with class = "div1"
+    -> p with class div1p1
+    -> p with class div1p2
+*/
+/*
+.div1 + font-size + width + margin
+.div1p1 + font-weight + color + hover
+.div1p2 + font-weight + color + before
+*/
+
+.div1 {
+  font-size: 20px;
+  width: 80%;
+  margin: 0, auto;
+
+  #{&}p1 {
+    font-weight: 600;
+    color: red;
+    &:hover {
+      color: wheat;
+    }
+  }
+  #{&}p2 {
+    font-weight: 800;
+    color: yellow;
+    &::before {
+      content: "before";
+      color: red;
+    }
+  }
+}

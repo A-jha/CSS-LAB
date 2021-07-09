@@ -1,0 +1,55 @@
+@import "./resets";
+@import "./variables";
+
+@function weight($weight-name) {
+  @return map-get($font-weight, $weight-name);
+}
+
+@mixin flexcenter($direction) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+}
+
+/*changing theme using scss*/
+@mixin theme($light-theme: true) {
+  @if $light-theme {
+    background-color: lighten($color: #abcdef, $amount: 100%);
+    color: darken($color: #000000, $amount: 100%);
+  }
+}
+
+/*making layout for mobile phones*/
+@mixin mobile {
+  @media (max-width: $mobile) {
+    @content;
+  }
+}
+body {
+  background: $secondary-color;
+  color: $text-dark;
+  font-weight: weight(bold);
+}
+
+.main {
+  @include flexcenter(row-reverse);
+  width: 80%;
+  margin: 0 auto;
+  background: $primary-color;
+  #{&}_para {
+    font-size: 30px;
+
+    /*select the parent and add hover*/
+    &:hover {
+      color: $secondary-color;
+    }
+  }
+  @include mobile {
+    @include flexcenter(column);
+  }
+}
+
+.light {
+  @include theme($light-theme: true);
+}

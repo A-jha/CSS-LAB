@@ -1,0 +1,18 @@
+/*--------Variable Declaration-----------*/
+$primary-color: #123456;
+$font-size: 20px;
+
+/*-------Map---------*/
+$font-weight: (
+  "normal": 300,
+  "medium": 400,
+  "bold": 600,
+  "Extra-bold": 900,
+);
+
+/*Use Variables and Map*/
+
+.someClass {
+  background: $primary-color;
+  font-weight: map-get($font-weight, "bold");
+}
